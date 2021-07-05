@@ -3,6 +3,11 @@
         "stack": "cpp",
         "string": "cpp",
         "vector": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "algorithm": "cpp",
+        "xiosbase": "cpp",
+        "xlocale": "cpp",
+        "xmemory": "cpp",
+        "iostream": "cpp"
     }
 }
