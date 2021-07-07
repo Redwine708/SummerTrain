@@ -2,7 +2,10 @@
 #include <iostream>
 #include <algorithm>
 #include <functional>
- 
+#include <iostream>
+#include <string>
+#include <unordered_map>
+using namespace std;
 int main()
 {
     std::vector<int> c = {1, 2, 3, 4, 5, 6, 7};
@@ -22,4 +25,8 @@ int main()
     // （这可能带来不必要的开销）
     std::function<int(int)> func2 = [](int i) mutable ->int { return i + 4; };
     std::cout << "func2: " << func2(6) << '\n';
+
+
+    unordered_map<string,int>table;
+    table["Monday"] = 1;
 }
