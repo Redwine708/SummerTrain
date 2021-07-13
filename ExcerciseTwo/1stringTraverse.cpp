@@ -22,7 +22,7 @@ int main()
     while(T--)
     {
         getline(cin,a);
-        // getchar();
+        // getchar();   
         cout<<perform(a);
         if(T!=0)
         {

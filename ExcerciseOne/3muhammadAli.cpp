@@ -3,7 +3,7 @@
 #include<string>
 using namespace std;
 
-unordered_map<string,int>hash1;
+unordered_map<string,int> hash1;
 string weekday[7] = {"monday","tuesday","wednesday","thursday","friday","saturday", "sunday"};
 void make_table()
 {
@@ -41,7 +41,7 @@ int main()
         int duringDays = interval ;
         while( duringDays <= right  )
         {
-            if(duringDays >= left && duringDays <= right)
+            if( duringDays >= left /*&& duringDays <= right*/ )
             {
                 result++;
                 first = duringDays;

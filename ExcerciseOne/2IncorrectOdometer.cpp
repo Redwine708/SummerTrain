@@ -6,15 +6,15 @@
 #include<unordered_map>
 #include<map>
 using namespace std;
-using namespace std;
+
 int main()
 {
 	map<char,string>a;
-	char aa[10]={'0','1','2','4','5','6','7','9'};
-	string bb[10]={"0","1","2","3","4","5","6","7"};
+	char originDecimal[10]={'0','1','2','4','5','6','7','9'};
+	string transOct[10]={"0","1","2","3","4","5","6","7"};
 	for(int i=0;i<8;i++)
 	{
-		a[aa[i]]=bb[i];
+		a[originDecimal[i]]=transOct[i];
 	}
 	int T;
 	cin>>T;getchar();
@@ -29,8 +29,10 @@ int main()
 		{
 			ss=ss+a[s[j]];
 		}
+
 		stringstream sss;
 		int m;
+
 		sss<<oct<<ss;
 		sss>>m;
 		cout<<m<<endl;

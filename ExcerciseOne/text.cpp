@@ -29,4 +29,29 @@ int main()
 
     unordered_map<string,int>table;
     table["Monday"] = 1;
+    string m = "ABC";
+    cout<<endl<<(m=="ABC");
+    cout<<endl;
+    vector<int>vec(10);
+    for(int i = 0 ; i < 10 ; i ++  )
+    {
+        vec[i] = i;
+    }
+    cout<<vec.size()<<endl;
+    vector<int >::iterator iter1 = vec.begin() ;
+    for(; iter1 != vec.end() ; iter1++)
+    {
+        if((*iter1) == 0)
+        {
+            iter1 = vec.erase(iter1);
+            break;
+        }
+    }
+    cout<<*iter1<<endl;
+    for(vector<int >::iterator iter = vec.begin() ; iter != vec.end() ; iter++)
+    {
+        cout<<*iter<<" ";
+    }
+    cout<<endl<<vec.size()<<endl;
+
 }

@@ -2,16 +2,20 @@
 #include<string>
 using namespace std;
 //the maxsize of the matrix
-const int MAXSIZE = 20008;
-int numMatrix[MAXSIZE][MAXSIZE];
+const int MAXSIZE = 10008;
 
-int judge(int n , int m);
+int judge(int** numMatrix,int n , int m);
 int main()
 {
     //column      row
     int n = 0 ; int m = 0;
     cin>>n>>m;
     string *str = new string[n];
+    int** numMatrix = new int* [n];
+    for(int i = 0 ; i < n ; i ++)
+    {
+        numMatrix[i] = new int [m];
+    }
     for(int i = 0 ; i < n ; i ++)
     {
         cin>>str[i];
@@ -23,15 +27,15 @@ int main()
             numMatrix[i][j] = str[i][j] - '0';
         }
     }
-    if(judge(n,m))cout<<"YES";
+    if(judge(numMatrix,n,m))cout<<"YES";
     else cout<<"NO";
 }
 
-int judge(int n , int m)
+int judge(int ** numMatrix,int n , int m)
 {
     int flag = false; 
     int mark = true;
-    int * sum = new int [m];
+    int  *sum  = new int[m];
     fill( sum, sum+m, 0 );
     for(int i = 0 ; i < n ; i ++ )
     {
@@ -43,7 +47,7 @@ int judge(int n , int m)
                 sum[k] += numMatrix[j][k];
             }
         }
-        for(int x = 0 ; x < m ; x ++)
+        for(int x = 0 ; x < m ; x ++ )
         {
             if(sum[x] == 0){
                 flag = false;
@@ -55,6 +59,6 @@ int judge(int n , int m)
         mark = true;
         fill( sum, sum+m, 0 );
     }
-    delete sum;
+    //delete sum;
     return flag;
 }
