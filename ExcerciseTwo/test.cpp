@@ -13,5 +13,9 @@ int main()
     hash1["张三"] = 1;
     hash2.push_back("张三");
     cout<<hash1[hash2[0]]<<endl;
+    string t; int m ;
+    getline(cin,t);
+    cin>>m;
+    cout<<t<<" "<<m;
 
 }
