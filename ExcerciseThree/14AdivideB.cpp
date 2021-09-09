@@ -25,8 +25,14 @@ int main()
     int nums = 0;
     cin>>text>>nums;
     if(text[0] != '0'){
+    if(text.size() == 1 && text[0] - '0' < nums)
+    {
+        cout<<0<<" "<<text[0];
+    }
+    else{
     pair<string,int> t =divide(text,nums);
     cout<<t.first<<" "<<t.second;
+    }
     }
     else cout<<0<<" "<<0;
 }

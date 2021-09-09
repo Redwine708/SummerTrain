@@ -57,5 +57,6 @@
         "xutility": "cpp",
         "set": "cpp"
     },
-    "editor.fontSize": 20
+    "editor.fontSize": 20,
+    "C_Cpp.errorSquiggles": "Disabled"
 }
