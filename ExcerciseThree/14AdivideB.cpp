@@ -13,8 +13,8 @@ pair<string,int> divide(string& text, int nums)
     for(int i = 0 ; i < n ; i ++ )
     {
         int all = tmp * 10 + text[i] - '0';
-        int store = all / nums;
-        if(i!=0 || store){newText.push_back( store + '0');}
+        int store = all / nums ;
+        if(i != 0 || store){newText.push_back( store + '0');}
         tmp = all % nums ;
     }
     return make_pair(newText,tmp);

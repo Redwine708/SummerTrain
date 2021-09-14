@@ -40,14 +40,13 @@ void transTzolkin(int days)
 		year--; days += 260; 
 	} 
 	int month = (days - 1 ) % 13;  //
-	month = days / 20;  //
+	//month = days / 20;  //
 	days %= 20;
 	if(days == 0)
 	{
 		month--;days += 20;
-	 } 
-	days = (days - 1) % 20 ;
-	string day = Tzolkin[days];
+	} 
+	string day = Tzolkin[--days];
 	cout<<month + 1 <<" "<<day<<" "<<
 		year<<endl;	
 }

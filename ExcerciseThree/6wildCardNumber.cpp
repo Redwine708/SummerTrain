@@ -12,10 +12,12 @@ int main()
 		int result = 0;
 		int cnt = 0;
 		int size = source.size(); 
+		//
 		for(int i = 0 ; i < size ; i ++)
 		{
 			if(source[i] == '?')cnt++;
 		}
+		//
 		for(int i = 0 ;i < size ; i ++)
 		{
 			if(source[i] == '?')

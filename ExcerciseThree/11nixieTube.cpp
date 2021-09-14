@@ -22,7 +22,7 @@ int main()
     {
         bool flag = true;
         int a[10];
-        a[0] = start;
+        a[0] = start;	
         for(int i = 1 ; i < 10 ; i ++)
         {
             cin>>a[i];
